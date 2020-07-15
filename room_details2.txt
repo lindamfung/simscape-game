@@ -1,0 +1,29 @@
+The room is painted black with very bright orange furniture laying around.
+There's a door directly in front of you but it is locked...
+key
+Use it to unlock the door and escape.
+folded paper
+There's something written on this piece of paper.
+I am the beginning of everything, the end of everywhere. I'm the beginning of eternity, the end of time & space. What am I?
+orange desk
+There's a folded piece of paper sitting on top of the desk.
+orange dresser
+It requires a single lowercase letter to unlock.
+e
+The room is painted with splatters of all different colors of the rainbow.
+There's a door directly in front of you but it is locked...
+key
+Use it to unlock the door and escape.
+screwdriver
+Use it to unscrew something.
+crumpled paper
+There's a crumpled piece of paper with a math problem printed on it.
+3 x 6 - 9 + 7 = ?
+small safe
+It requires a combination. There's also 4 screws holding the door in place.
+screwdriver
+pink lock box
+It requires a number to unlock.
+16
+purple couch
+There's something inside the cushion.

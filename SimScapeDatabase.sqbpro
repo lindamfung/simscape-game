@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="/Users/lindafung/eclipse-workspace/SimScape/SimScapeDatabase.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="2559"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,4:mainRoom"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Item" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort><column index="1" mode="0"/></sort><column_widths><column index="1" value="61"/><column index="2" value="88"/><column index="3" value="371"/><column index="4" value="59"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Room" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="46"/><column index="2" value="63"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">DROP TABLE Item;
+DROP TABLE ItemReveal;
+DROP TABLE Room;
+
+
+CREATE TABLE Item (
+item_id INTEGER NOT NULL,
+item_name VARCHAR(64) NOT NULL,
+item_desc VARCHAR(128) NOT NULL,
+item_type VARCHAR(64) NOT NULL,
+PRIMARY KEY (item_id),
+FOREIGN KEY (item_id) REFERENCES ItemReveal(item_id),
+FOREIGN KEY (item_id) REFERENCES Room(item_id),
+CONSTRAINT CHK_Type CHECK (item_type='Clue' OR item_type='Tool' OR item_type='Puzzle' OR item_type='Furniture')
+);
+
+CREATE TABLE Room (
+item_id INTEGER NOT NULL,
+room_num INTEGER NOT NULL,
+FOREIGN KEY (item_id) REFERENCES Item(item_id),
+FOREIGN KEY (item_id) REFERENCES ItemReveal(item_id)
+);
+
+CREATE TABLE ItemReveal (
+item_id INTEGER NOT NULL,
+item_reveal VARCHAR(128) NOT NULL,
+FOREIGN KEY (item_id) REFERENCES Item(item_id),
+FOREIGN KEY (item_id) REFERENCES Room(item_id)
+);
+
+SELECT room_num, count(Item.item_id) AS item_count FROM Item
+JOIN Room ON Room.item_id = Item.item_id
+GROUP BY room_num;
+
+SELECT item_type, count(Item.item_id) AS item_count FROM Item
+GROUP BY item_type;
+
+SELECT item_type, item_name FROM Item
+ORDER BY item_type, item_name;</sql><current_tab id="0"/></tab_sql></sqlb_project>

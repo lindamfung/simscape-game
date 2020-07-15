@@ -1,0 +1,7 @@
+The room is plain white with a gray lock box in the middle of the floor.
+There's a door directly in front of you labeled 9522 but it is locked...
+key
+Use it to unlock the door and escape.
+gray lock box
+It requires a 4-digit code to unlock.
+9522

@@ -1,0 +1,38 @@
+==> First room loaded.
+==> Other rooms loaded.
+==> All rooms connected. Game is fully loaded.
+
+==> Item Distribution...
+There are 2 total Clue items in the game.
+There are 2 total Furniture items in the game.
+There are 4 total Puzzle items in the game.
+There are 4 total Tool items in the game.
+There are 2 items total in Room 1.
+There are 4 items total in Room 2.
+There are 6 items total in Room 3.
+
+==> All Available Items...
+Clue      	crumpled paper
+Clue      	folded paper
+Furniture 	orange desk
+Furniture 	purple couch
+Puzzle    	gray lock box
+Puzzle    	orange dresser
+Puzzle    	pink lock box
+Puzzle    	small safe
+Tool      	key       
+Tool      	key       
+Tool      	key       
+Tool      	screwdriver
+
+==> This is SIMSCAPE: A text-based simulation of an escape room game. 
+Enter your name to start the game: 
+==> Welcome, Linda! 
+You just entered Room Level 1.
+
+==> What would you like to do? (Enter a number)
+1. Examine the room.
+2. View all items in the room.
+3. Inspect an item in the room.
+4. View all items in your inventory.
+5. Inspect an item in your inventory.
