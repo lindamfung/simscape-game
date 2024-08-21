@@ -1,4 +1,4 @@
-# SimScape
+# SimScape Game
 
 >*SimScape: A Text-Based Simulation of an Escape Room Game*
 
